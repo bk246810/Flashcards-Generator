@@ -1,0 +1,164 @@
+*{
+	margin:  0;
+	padding: 0;
+	font-family: 'Glory', sans-serif;
+}
+.header{
+	min-height: 100vh;
+	width:  100%;
+	background-image:  linear-gradient(rgba(4,9,30,0.3),rgba(4,9,30,0.3)),url(bg2.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+body{
+	margin: 0px;
+}
+
+nav{
+	display: flex;
+	padding: 2% 6%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-links{
+	flex: 1;
+	text-align: right;
+}
+.nav-links ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 8px 12px;
+	position: relative;
+}
+.nav-links ul li a{
+	color:  #fff;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+/*hover effect for nav bar*/
+
+.nav-links ul li::after{
+	content:  '';
+	width: 0%;
+	height: 2px;
+	background: lightskyblue;
+	display: block;
+	margin: auto;
+	transition: 0.7s;
+}
+.nav-links ul li:hover::after{
+	width: 100%;
+}
+
+/*center website content*/
+.home-text,.flashcards{
+	width: 90%;
+	color:  white;
+	position:  absolute;
+	top: 50%;
+	left: 50%;
+	transform:  translate(-50%,-50%);
+	text-align: center;
+}
+.home-text h1{
+	font-size: 50px;
+}
+.home-text p{
+	/*margin 10 from top, 0 from left and right, and 40 from the bot*/
+	margin: 10px 0 40px;
+	font-size: 20px;
+	color: white;
+}
+.flashcard-button,.submitButton,.showAnsButton{
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	border: 1px solid white;
+	padding: 12px 34px;
+	font-size: 13px;
+	background: transparent;
+	position: relative;
+	cursor: pointer;
+}
+.flashcard-button:hover,.submitButton:hover,.showAnsButton:hover{
+	border:  1px solid lightskyblue;
+	background: lightskyblue;
+	transition: 0.7s;
+}
+
+textarea{
+	margin: 5px;
+	padding: 10px;
+  resize: none;
+  border-radius: 6px;
+  outline: none;
+  overflow-y: scroll;
+}
+label.labels{
+  font-weight:600;
+  font-size: 25px;
+  color:white;
+  margin-top: 5%;
+}
+
+textarea::-webkit-scrollbar{
+	width: 6px;
+}
+textarea::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 20px black;
+	border-radius: 10px;
+}
+textarea::-webkit-scrollbar-thumb{
+	background-color: lightskyblue;
+	border-radius: 10px;
+}
+
+/*flashcards slides container*/
+.flashcards-slides-container{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 9px;
+	width: 70%;
+	height: 50%;
+	text-align: center;
+	margin-left: 15%;
+	margin-top: 5%;
+}
+.slides{
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+.moveSlidesButton{
+}
+/*Next & previous buttons*/
+.prev, .next {
+	position: absolute;
+  cursor: pointer;
+  padding: 16px;
+  margin-top: 15%;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 6px;
+  user-select: none;
+}
+.prev{
+	margin-left: 20%;
+	left: initial;
+}
+
+/*Position the "next button" to the right */
+.next {
+	margin-right: 20%;
+	right: 0;
+}
+
+ /*On hover, add a background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: lightskyblue;
+}
